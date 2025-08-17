@@ -1,10 +1,12 @@
 Input_text = ''
 
+#main menu
 print("----------------------------------------------------------")
 print("__Welcome to chmod_calculator__\n--> This simple CLI program help you to calculater linux chmod values easily")
 print("--> Please enter the access fortmat \'rwx\' for \'Owner\',\'Group\',\'Other\'")
 print("----------------------------------------------------------\n")
 
+#calculation and validating function
 def ChmodCalculator(text):
     try:
         string_text = str(text)
@@ -17,6 +19,8 @@ def ChmodCalculator(text):
         
         chmod = [0,0,0]
         chmod_index = 0
+
+        #calculation process
         for item in splited_text:
             for charecter in item:
                 if 'r' in charecter:
