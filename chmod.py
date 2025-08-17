@@ -9,6 +9,19 @@ def ChmodCalculator(text):
         if not len(splited_text)==3:
             print("\n<__please Enter valid input__>")
             return
+        
+        chmod = [0,0,0]
+        chmod_index = 0
+        for item in splited_text:
+            for charecter in item:
+                if 'r' in charecter:
+                    chmod[chmod_index]+=4
+                if 'w' in charecter:
+                    chmod[chmod_index]+=2
+                if 'x' in charecter:
+                    chmod[chmod_index]+=1
+            chmod_index+= 1
+        
 
     except:
         print("\n<<__please Enter valid input__>>\n\n")
